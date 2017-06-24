@@ -1,0 +1,25 @@
+".vimrc.bepo
+" AUTHOR : Cécile MB
+" Last modification : 6.04.2017
+
+
+" [HJKL] -> {CTSR}
+" ————————————————
+" {cr} = « gauche / droite »
+noremap c h
+noremap r l
+" {ts} = « haut / bas »
+noremap t j
+noremap s k
+" {CR} = « haut / bas de l'écran »
+noremap C H
+noremap R L
+" {TS} = « joindre / aide »
+noremap T J
+noremap S K
+
+" Split movements :
+nnoremap <C-T> <C-W><C-J>
+nnoremap <C-C> <C-W><C-H>
+nnoremap <C-D> <C-W><C-K>
+nnoremap <C-R> <C-W><C-L>

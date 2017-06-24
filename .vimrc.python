@@ -1,0 +1,27 @@
+" .vimrc.python
+" AUTHOR : Sukkoria
+" Last modification : 24.06.2017
+
+" Comment/uncomment
+nnoremap <buffer> <leader>c I#<esc>
+nnoremap <leader>t :s/#//<CR>
+" Bulk comment /!\ Not working yet
+vnoremap <leader>c <esc>`>0a'''<esc>`<$i'''<esc>%
+
+set tw=120 " 119 col textwidth	
+
+" Double characters behaviour
+inoremap { {}<Esc>i
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap " ""<Esc>i
+" To test...
+inoremap < \<\><Esc>i
+
+inoremap <leader>{ {
+inoremap <leader>( (
+inoremap <leader>[ [
+inoremap <leader>" "
+inoremap <leader>< <
+
+

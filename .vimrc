@@ -1,24 +1,9 @@
-" .vimrc
-
-" IMPORTANT : DO NOT REMOVE
-
-" All system-wide defaults are set in $VIMRUNTIME/archlinux.vim (usually just
-" " /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtime
-" " you can find below.  If you wish to change any of those settings, you
-" should
-" " do it in this file (/etc/vimrc), since archlinux.vim will be overwritten
-" " everytime an upgrade of the vim packages is performed.  It is recommended
-" to
-" " make changes after sourcing archlinux.vim since it alters the value of the
-" " 'compatible' option.
+" .vimrc 
+" AUTHOR : Sukkoria
+" Last modification : 24.06.2017
 
 " ensures that various options are properly set to work with the Vim-related packages.
  runtime! archlinux.vim
-
-" " If you prefer the old-style vim functionalty, add 'runtime!
-" vimrc_example.vim'
-" For HELP, read /usr/share/vim/vim74/vimrc_example.vim or the vim manual
-
 
 " GENERAL
 	set number	" Numbers along the lines
@@ -27,7 +12,6 @@
 	set title 	" Title for the window
 	set lbr! 	" Don’t cut the words
 	syntax on
-        set tw=100 " 79 col textwidth	
         let mapleader=","
         let g:mapleader=","
         set listchars+=nbsp:_
@@ -35,12 +19,13 @@
 	" Enable type-specific configuration
 	filetype on 
 	filetype plugin on
-	filetype indent on
 
 	" Indenting
 	"Default to autoindenting of C like languages
 	"This is overridden per filetype below
-	set noautoindent smartindent copyindent
+	set autoindent
+	filetype indent on
+
 	" Show levels of indentation
 	set listchars=tab:--
 
@@ -133,8 +118,7 @@
         
 
 " PYTHON
-	" Comment a line
-	au FileType python source ~/.vimrc.python 
+au FileType python source ~/.vimrc.python 
 
 " JS
 au FileType javascript source ~/.vimrc.js

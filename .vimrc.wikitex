@@ -1,0 +1,37 @@
+" .vimrc.wikitex
+" AUTHOR : Sukkoria
+" Last modification : 24.06.2017
+
+set tw=80 " 79 col textwidth	
+
+" BASIC LATEX CONFIG
+" Double characters behaviour
+inoremap { {}<Esc>i
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap " ""<Esc>i
+inoremap < <><Esc>i
+
+inoremap <leader>{ {
+inoremap <leader>( (
+inoremap <leader>[ [
+inoremap <leader>" "
+inoremap <leader>< <
+
+" Comment/uncomment
+nnoremap <buffer> <leader>c I%<esc>
+nnoremap <leader>t :s/%//
+
+" Automatic set selected word (in visual mode) in \textsc{}
+nnoremap <leader>sc viw<esc>a}<esc>bi\textsc{<esc>
+vnoremap <leader>sc <esc>`>a}<esc>`<i\textsc{<esc>%
+
+" Automatic set selected word (in visual mode) in \emph{}
+nnoremap <leader>em viw<esc>a}<esc>bi\emph{<esc>
+vnoremap <leader>em <esc>`>a}<esc>`<i\emph{<esc>%
+
+" WIKI-INSPIRED COMMANDS
+" Sections, subsections, subsubsections
+inoremap <leader>== <esc>d2hi\section{}<esc>i
+inoremap <leader>=== <esc>d2hi\subsection{}<esc>i
+inoremap <leader>==== <esc>d2hi\subsubsection{}<esc>i
